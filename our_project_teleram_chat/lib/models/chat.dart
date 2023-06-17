@@ -1,34 +1,48 @@
-import 'dart:convert';
-
-Map<String, Map<String, dynamic>> chatslar = {
-  "1": {
-    "qabul_qiluvchi": "message",
-  },
-};
+import 'dart:io';
 
 class Chat {
-  String junatuvchi;
-  String qabulQiluvchi;
-  String message;
+  String sender;
+  String receiver;
+  List<List<String>> messages;
+
   Chat({
-    required this.junatuvchi,
-    required this.qabulQiluvchi,
-    required this.message,
-  });
+    required this.sender,
+    required this.receiver,
+    List<List<String>>? messages,
+  }) : messages = messages ?? [];
+
+  List<List<String>> sendMessage(String sender, String message) {
+    messages.add([sender, message]);
+    return messages;
+  }
 
   Map<String, dynamic> toMap() {
     return {
-      'junatuvchi': junatuvchi,
-      'qabulQiluvchi': qabulQiluvchi,
-      'message': message,
+      'sender': sender,
+      'receiver': receiver,
+      'messages': messages,
     };
   }
 
   factory Chat.fromMap(Map<String, dynamic> map) {
     return Chat(
-      junatuvchi: map['junatuvchi'] ?? '',
-      qabulQiluvchi: map['qabulQiluvchi'] ?? '',
-      message: map['message'] ?? '',
+      sender: map['sender'] ?? '',
+      receiver: map['receiver'] ?? '',
+      messages: map['messages'] ?? [],
     );
+  }
+
+  void printMessages(String currentUser) {
+    for (final sms in messages) {
+      if (sms[0] == currentUser) {
+        printMessageEndLine(sms[1]);
+      } else {
+        print(sms[1]);
+      }
+    }
+  }
+
+  void printMessageEndLine(String message) {
+    print(message.padLeft(stdout.terminalColumns));
   }
 }

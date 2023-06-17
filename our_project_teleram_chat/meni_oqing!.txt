@@ -1,0 +1,11 @@
+Xo'o'o'o'sh
+
+user yozishmalari uchun alohida database ochildi endi har bitta userni kimdirla bilan yozishmalari
+bazada saqlanadi. Har bitta userda bo'sa kimla bilan yozishgani turadi.
+yozishmala id bo'yicha olinadi. ya'ni agar bitta odam bilan oldin 
+yozishmagan bo'sa id yangi yaratiladi. agar u odam bilan oldin yozishgan bo'lsa(kimla bilan yozishgani userChats listida)
+yozishgan odamini id si bo'yicha o'sha yozishmalar tarixi ko'rsatiladi
+
+xullas allambalo
+boshim achib ketti buni qilaman dib soat 2:23
+sana 18-iyun 2023
