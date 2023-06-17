@@ -1,19 +1,6 @@
 import 'dart:io';
 
 class Chat {
-
-  String qabulQiluvchi;
-  String message;
-  Chat({
-    required this.qabulQiluvchi,
-    required this.message,
-  });
-
-  Map<String, dynamic> toMap() {
-    return {
-      'qabulQiluvchi': qabulQiluvchi,
-      'message': message,
-    
   String sender;
   String receiver;
   List<List<String>> messages;
@@ -34,20 +21,14 @@ class Chat {
       'sender': sender,
       'receiver': receiver,
       'messages': messages,
-
     };
   }
 
   factory Chat.fromMap(Map<String, dynamic> map) {
     return Chat(
-
-      qabulQiluvchi: map['qabulQiluvchi'] ?? '',
-      message: map['message'] ?? '',
-
       sender: map['sender'] ?? '',
       receiver: map['receiver'] ?? '',
       messages: map['messages'] ?? [],
->>>>>>> 87c77ee9e7ba66abcef9f479e833a6192abb2de2
     );
   }
 
