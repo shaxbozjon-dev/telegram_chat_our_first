@@ -9,6 +9,7 @@ class DataBase {
     }
   };
 
+  ///Create User
   bool createUser(User user) {
     //agar ichida bulsa falsa qaytaradi
     if (userData.containsKey(user.number)) {
@@ -19,10 +20,12 @@ class DataBase {
     return true;
   }
 
+  ///Read All Users
   List<Map<String, dynamic>> readAllUsers() {
     return userData.values.toList();
   }
 
+  ///Read User from number
   User? readUser(String number) {
     if (userData.containsKey(number)) {
       return User.fromMap(userData[number]!);
