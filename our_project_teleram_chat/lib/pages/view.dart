@@ -1,13 +1,12 @@
+import 'package:our_project_teleram_chat/models/chat.dart';
+
 import '../data_base/data_base.dart';
 import '../models/../models/user_model.dart';
 // import 'package:uuid/uuid.dart';
 import '../pages/builder.dart';
 import '../servise/io_servise.dart';
 
-void main(List<String> args) {
-  Menu menu = Menu();
-  menu.builder();
-}
+Menu menu = Menu();
 
 class Menu extends Builder {
   @override
@@ -18,7 +17,6 @@ class Menu extends Builder {
     while (true) {
       String common = io.outputText(
           "_________________Xush kelibsiz___________________\n1.SignIn\n2.SignUp\n3.exit\n");
-
       switch (common) {
         case "1":
           SignIn();
@@ -51,7 +49,12 @@ void SignIn() {
       print(db.readAllUsers());
       break;
     case "2":
-      break;
+      String qabulQiluvchi =
+          io.outputText("qabul qiluvchi odemni raqamini kiriting 🔛 ");
+      String message = io.outputText("junatuvchi odemni raqamini kiriting 🔛 ");
+      Chat chat = Chat(qabulQiluvchi: qabulQiluvchi, message: message);
+      print(chat.message);
+
     default:
   }
 }
