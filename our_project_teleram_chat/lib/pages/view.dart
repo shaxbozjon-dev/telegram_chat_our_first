@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'package:our_project_teleram_chat/models/chat.dart';
 
 import '../data_base/data_base.dart';
@@ -53,12 +52,9 @@ void SignIn() {
       String qabulQiluvchi =
           io.outputText("qabul qiluvchi odemni raqamini kiriting 🔛 ");
       String message = io.outputText("junatuvchi odemni raqamini kiriting 🔛 ");
-      Chat chat = Chat(qabulQiluvchi: qabulQiluvchi, message: message);
-      print(chat.message);
+      Chat chat = Chat(sender: qabulQiluvchi, receiver: message);
+      print(chat.receiver);
 
     default:
   }
 }
-=======
-
->>>>>>> 87c77ee9e7ba66abcef9f479e833a6192abb2de2
