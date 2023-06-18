@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:our_project_teleram_chat/models/chat.dart';
 
 import '../data_base/data_base.dart';
@@ -58,3 +59,6 @@ void SignIn() {
     default:
   }
 }
+=======
+
+>>>>>>> 87c77ee9e7ba66abcef9f479e833a6192abb2de2
