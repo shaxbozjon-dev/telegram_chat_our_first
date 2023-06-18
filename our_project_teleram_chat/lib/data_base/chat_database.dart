@@ -1,5 +1,5 @@
-import 'package:our_project_teleram_chat/models/chat.dart';
 import 'package:uuid/uuid.dart';
+import '../models/chat.dart';
 
 ChatBase chb = ChatBase();
 
