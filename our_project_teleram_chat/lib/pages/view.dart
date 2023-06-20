@@ -1,10 +1,11 @@
+import 'package:our_project_teleram_chat/data_base/chat_database.dart';
 import 'package:our_project_teleram_chat/models/chat.dart';
 
 import '../data_base/data_base.dart';
 import '../models/../models/user_model.dart';
 // import 'package:uuid/uuid.dart';
 import '../pages/builder.dart';
-import '../servise/io_servise.dart';
+import '../service/io_service.dart';
 
 Menu menu = Menu();
 
@@ -53,7 +54,7 @@ void SignIn() {
           io.outputText("qabul qiluvchi odemni raqamini kiriting 🔛 ");
       String message = io.outputText("junatuvchi odemni raqamini kiriting 🔛 ");
       Chat chat = Chat(sender: qabulQiluvchi, receiver: message);
-      print(chat.receiver);
+      ChatBase().addMessage("", qabulQiluvchi, message);
 
     default:
   }
