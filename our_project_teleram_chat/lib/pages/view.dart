@@ -19,7 +19,7 @@ class Menu extends Builder {
           "_________________Xush kelibsiz___________________\n1.SignIn\n2.SignUp\n3.exit\n");
       switch (common) {
         case "1":
-          SignIn();
+          signIn();
           break;
         case "2":
           signUp();
@@ -34,11 +34,10 @@ void signUp() {
   String number = "";
   String name = "";
   String password = "";
-  bool check = false;
   db.takror(number, name, password);
 }
 
-void SignIn() {
+void signIn() {
   String number = io.outputText("******Sign UP*****\n number kiriting: ");
   String password = io.outputText(" parol kiriting: ");
   print(db.readUser(number));
