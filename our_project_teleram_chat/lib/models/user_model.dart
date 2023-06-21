@@ -1,6 +1,7 @@
 import 'dart:io';
-import '../data_base/chat_database.dart';
-import 'chat.dart';
+
+import 'package:our_project_teleram_chat/data_base/chat_database.dart';
+import 'package:our_project_teleram_chat/models/chat.dart';
 
 class User {
   String number;
