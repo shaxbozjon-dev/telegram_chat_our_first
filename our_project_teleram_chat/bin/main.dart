@@ -1,3 +1,3 @@
-import 'package:our_project_teleram_chat/pages/view.dart';
+// import 'package:our_project_teleram_chat/pages/view.dart';
 
-void main(List<String> args) => menu.builder();
+// void main(List<String> args) => menu.builder();
